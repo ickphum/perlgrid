@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource version="2.3.0.1" xmlns="http://www.wxwidgets.org/wxxrc">
+    <object class="wxFrame" name="main">
+        <style>wxCAPTION|wxRESIZE_BORDER|wxSYSTEM_MENU|wxMINIMIZE_BOX|wxCLOSE_BOX</style>
+        <size>1100,800</size>
+        <title>Grid</title>
+        <centered>1</centered>
+        <icon>image/grid32.png</icon>
+        <object class="wxToolBar" name="frame_tbr">
+            <style>wxTB_FLAT|wxTB_HORIZONTAL</style>
+            <object class="tool" name="wxID_NEW">
+                <bitmap>image/document-new.png</bitmap>
+                <tooltip>New</tooltip>
+            </object>
+            <object class="tool" name="wxID_OPEN">
+                <bitmap>image/document-open.png</bitmap>
+                <tooltip>Open</tooltip>
+            </object>
+            <object class="tool" name="wxID_SAVE">
+                <bitmap>image/document-save.png</bitmap>
+                <tooltip>Save</tooltip>
+            </object>
+            <object class="tool" name="wxID_SAVEAS">
+                <bitmap>image/document-save-as.png</bitmap>
+                <tooltip>Save As...</tooltip>
+            </object>
+            <object class="tool" name="wxID_PREFERENCES">
+                <bitmap>image/gear.png</bitmap>
+                <tooltip>Settings</tooltip>
+            </object>
+            <object class="separator">
+            </object>
+            <object class="tool" name="tb_play">
+                <bitmap>image/media-playback-start.png</bitmap>
+                <tooltip>Play</tooltip>
+            </object>
+            <object class="tool" name="tb_step">
+                <bitmap>image/media-step-forward.png</bitmap>
+                <tooltip>Step</tooltip>
+            </object>
+            <object class="tool" name="tb_pause">
+                <bitmap>image/media-playback-pause.png</bitmap>
+                <tooltip>Pause</tooltip>
+            </object>
+            <object class="tool" name="tb_stop">
+                <bitmap>image/media-playback-stop.png</bitmap>
+                <tooltip>Stop</tooltip>
+            </object>
+        </object>
+        <object class="wxSplitterWindow" name="ID_SPLITTERWINDOW">
+            <size>100,100</size>
+            <style>wxSP_3DBORDER|wxSP_3DSASH|wxNO_BORDER</style>
+            <orientation>vertical</orientation>
+            <sashpos>50</sashpos>
+            <minsize>0</minsize>
+            <object class="wxTreeCtrl" name="primitive_tcl">
+                <size>200,100</size>
+                <style>wxTR_EDIT_LABELS|wxTR_NO_LINES|wxTR_HIDE_ROOT|wxTR_MULTIPLE</style>
+            </object>
+            <object class="wxNotebook" name="ID_NOTEBOOK">
+                <style>wxBK_DEFAULT</style>
+                <object class="notebookpage">
+                    <label>Grid Layout</label>
+                    <object class="wxPanel" name="layout_pnl">
+                        <style>wxSUNKEN_BORDER|wxFULL_REPAINT_ON_RESIZE|wxTAB_TRAVERSAL</style>
+                        <exstyle>wxWS_EX_VALIDATE_RECURSIVELY</exstyle>
+                        <bg>#7F7F7F</bg>
+                        <object class="wxBoxSizer">
+                            <orient>wxVERTICAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxGROW</flag>
+                                <border>5</border>
+                                <object class="wxToolBar" name="canvas_tbr">
+                                    <style>wxTB_FLAT|wxTB_HORIZONTAL</style>
+                                    <bg>#C5C2C2</bg>
+                                    <dontattachtoframe>1</dontattachtoframe>
+                                    <object class="tool" name="tb_box">
+                                        <bitmap>image/box.png</bitmap>
+                                        <tooltip>New Box</tooltip>
+                                    </object>
+                                    <object class="tool" name="tb_polygon">
+                                        <bitmap>image/polygon.png</bitmap>
+                                        <tooltip>New Polygon</tooltip>
+                                    </object>
+                                    <object class="tool" name="tb_polyline">
+                                        <bitmap>image/polyline.png</bitmap>
+                                        <tooltip>New Polyline</tooltip>
+                                    </object>
+                                    <object class="tool" name="tb_ellipse">
+                                        <bitmap>image/ellipse.png</bitmap>
+                                        <tooltip>New Ellipse</tooltip>
+                                    </object>
+                                    <object class="tool" name="tb_curve">
+                                        <bitmap>image/curve.png</bitmap>
+                                        <tooltip>New Curve</tooltip>
+                                    </object>
+                                    <object class="tool" name="tb_freeline">
+                                        <bitmap>image/freeline.png</bitmap>
+                                        <tooltip>New Freeline</tooltip>
+                                    </object>
+                                    <object class="separator">
+                                    </object>
+                                    <object class="tool" name="tb_trash">
+                                        <bitmap>image/user-trash.png</bitmap>
+                                        <tooltip>Delete</tooltip>
+                                    </object>
+                                    <object class="tool" name="tb_edit">
+                                        <bitmap>image/gtk-edit.png</bitmap>
+                                        <tooltip>Edit</tooltip>
+                                    </object>
+                                    <object class="separator">
+                                    </object>
+                                    <object class="tool" name="tb_multiselect">
+                                        <bitmap>image/multiselect.png</bitmap>
+                                        <tooltip>Toggle Multi-selection</tooltip>
+                                        <toggle>1</toggle>
+                                    </object>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW</flag>
+                                <border>0</border>
+                                <option>1</option>
+                                <object class="wxPanel" name="grid_pnl">
+                                    <style>wxSUNKEN_BORDER|wxTAB_TRAVERSAL</style>
+                                    <exstyle>wxWS_EX_VALIDATE_RECURSIVELY</exstyle>
+                                    <bg>#767AAB</bg>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+                <object class="notebookpage">
+                    <label>Properties</label>
+                    <object class="wxPanel" name="properties_pnl">
+                        <style>wxSUNKEN_BORDER|wxTAB_TRAVERSAL</style>
+                        <exstyle>wxWS_EX_VALIDATE_RECURSIVELY</exstyle>
+                    </object>
+                </object>
+            </object>
+        </object>
+    </object>
+</resource>

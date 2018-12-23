@@ -1,0 +1,24 @@
+---
+height: 828
+left: 100
+panel:
+- 0,0
+primitives:
+- bottom: 21
+  height: 1
+  left: 8
+  name: Box 0
+  tree_item_id: Wx::TreeItemId=SCALAR(0x3593380)
+  type: 1
+  vertices:
+  - - 8
+    - 21
+  - - 8
+    - 21
+  - - 8
+    - 21
+  - - 8
+    - 21
+  width: 1
+top: 100
+width: 1100
